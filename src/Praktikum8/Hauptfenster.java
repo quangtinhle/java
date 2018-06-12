@@ -24,7 +24,7 @@ public class Hauptfenster extends Application{
 
         MenuItem laden = new MenuItem("Laden");
         MenuItem speichern = new MenuItem("Speichern");
-        MenuItem liste = new MenuItem("Beenden");
+        MenuItem beenden = new MenuItem("Beenden");
 
         MenuItem audio = new MenuItem("Audio neu");
         MenuItem bild = new MenuItem("Bild neu");
@@ -32,7 +32,7 @@ public class Hauptfenster extends Application{
         MenuItem erscheinung = new MenuItem("Erscheinungsjahr");
         MenuItem neuste = new MenuItem("Neuestes Medium");
 
-        datei.getItems().addAll(laden,speichern,liste);
+        datei.getItems().addAll(laden,speichern,beenden);
         medium.getItems().addAll(audio,bild);
         anzeige.getItems().addAll(erscheinung,neuste);
 
@@ -46,5 +46,8 @@ public class Hauptfenster extends Application{
 
         BildErfassungView b = new BildErfassungView(primaryStage);
         b.showview();
+
+        AudioErfassungView a = new AudioErfassungView(primaryStage);
+        a.showview();
     }
 }
